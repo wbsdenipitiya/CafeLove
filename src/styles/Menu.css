@@ -1,0 +1,91 @@
+.menuPage {
+  width: 100%;
+  padding: 60px 8%;
+  background-color: #ffffff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-sizing: border-box;
+}
+
+.menuTitle {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  font-size: 42px;
+  color: #121619;
+  margin-bottom: 50px;
+}
+
+.menuCategory {
+  margin-bottom: 50px;
+}
+
+.menuCategory h2 {
+  font-size: 28px;
+  color: #3b2a1a;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #c9a267;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+.menuCard {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menuCardImage {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;   /* shows FULL image, no cropping */
+  background-color: #f5f0e6; /* fills empty space left/right if image ratio differs */
+  display: block;
+}
+
+.menuCardInfo {
+  padding: 16px 20px;
+}
+
+.itemName {
+  font-size: 20px;
+  font-weight: 600;
+  color: #121619;
+  margin-bottom: 8px;
+}
+
+.itemPrice {
+  font-size: 16px;
+  font-weight: bold;
+  color: #b58e50;
+}
+
+@media only screen and (max-width: 600px) {
+  .menuPage {
+    padding: 40px 5%;
+  }
+
+  .menuTitle {
+    font-size: 32px;
+  }
+
+  .menuCardImage {
+    height: 180px;
+  }
+}
